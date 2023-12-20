@@ -1,4 +1,4 @@
-# Atomic Force Microscope (AFM) Cellular Vibrational Modes Detection
+# Cellular Vibration Analysis using Atomic Force Microscopy (AFM)
 ## Overview
 Welcome to the Atomic Force Microscope (AFM) Cellular Vibrational Modes Detection project! This GitHub repository hosts the code and resources for a comprehensive exploration of cellular vibrational modes using Atomic Force Microscopy. The project is structured into three main lines of work that are tightly interconnected: Experimental Setup, Data Analysis, and Image Analysis.
 
