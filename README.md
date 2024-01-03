@@ -14,3 +14,9 @@ Welcome to the Atomic Force Microscope (AFM) Cellular Vibrational Modes Detectio
 Ensure you have the following dependencies installed:
 
  - Python (version 3.9.13)
+
+## License
+
+This project is developed at the **Instituto de Micro y Nanotecnología**, part of **CSIC: Consejo Superior de Investigaciones Científicas**, within the research group **Bionanomechanics**. All rights reserved by the respective authors and contributors.
+
+For more details, refer to the information provided by the Bionanomechanics research group webpage: [BioNanoMechanics Lab](https://bionano.imn-cnm.csic.es/?lang=en).
