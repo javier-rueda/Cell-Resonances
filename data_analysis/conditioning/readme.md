@@ -10,7 +10,7 @@ The purpose of the 'conditioning' process is to transform raw data obtained from
 
 The 'conditioning' folder includes the following:
 
-- **/src**: This directory contains the source code for data conditioning. The primary script is `conditioning_script.py`, which processes raw AFM data and generates a CSV file.
+- **`conditioning.py`**: The source code for data conditioning, which processes raw AFM data and generates a CSV file.
 
 - **/data**: Sample raw data files used for testing the conditioning script. 
 
@@ -19,9 +19,9 @@ The 'conditioning' folder includes the following:
 To use the conditioning script:
 
 1. Run the conditioning script
-   python conditioning.py
+   `python conditioning.py`
 
-2. The script will process the raw data files from '/conditioning/data' and generate a CSV file in the same directory.
+2. The script will ask the user to browse the raw data files and generate a CSV file in the directory the user desires.
 
 3. The conditioned data in CSV format is now ready for use by the model fitting codes in other sections of the project.
 
