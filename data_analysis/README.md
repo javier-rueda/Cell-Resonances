@@ -37,8 +37,11 @@ To get started with the Data Analysis section:
 
 ## Contributing
 
-We welcome contributions to enhance the data analysis capabilities of our project. If you'd like to contribute, please follow our [Contribution Guidelines](CONTRIBUTING.md).
+We welcome contributions to enhance the data analysis capabilities of our project. If you'd like to contribute, please follow our standard contributing guidelines.
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE) - see the [LICENSE](LICENSE) file for details.
+This project is developed at the **Instituto de Micro y Nanotecnología**, part of **CSIC: Consejo Superior de Investigaciones Científicas**, within the research group **Bionanomechanics**. All rights reserved by the respective authors and contributors.
+
+For more details, refer to the license information provided by the Bionanomechanics research group.
+
