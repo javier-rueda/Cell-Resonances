@@ -37,7 +37,8 @@
 - **Pitch:** 100 [μm]
 - **Coating:** 30 nm Au on both sides
 
-### Shape and Mechanical Properties
+
+## Shape and Mechanical Properties
 
 ![nAmbition-5 Image](../../misc/images/nAmb5.png)
 
