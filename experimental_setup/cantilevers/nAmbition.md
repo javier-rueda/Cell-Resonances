@@ -23,9 +23,6 @@
 - **Pitch:** 200 [μm]
 - **Coating:** 30 nm Au on both sides
 
-![nAmbition-5 Image](../../misc/images/nAmb5.png)
-
-
 
 
 ### *nAmbition-10*
@@ -39,4 +36,8 @@
 - **Number of Cantilevers:** 2 / 8 (1 without tip)
 - **Pitch:** 100 [μm]
 - **Coating:** 30 nm Au on both sides
+
+
+
+![nAmbition-5 Image](../../misc/images/nAmb5.png)
 
