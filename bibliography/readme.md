@@ -14,8 +14,3 @@ The purpose of this folder is to centralize and maintain a comprehensive list of
 
 We encourage contributors to help expand our bibliography. If you come across relevant literature that is not listed, feel free to contribute.
 
-## License
-
-This project is developed at the **Instituto de Micro y Nanotecnología**, part of **CSIC: Consejo Superior de Investigaciones Científicas**, within the research group Bionanomechanics All rights reserved by the respective authors and contributors.
-
-For more details, refer to the information provided by the [Bionanomechanics research group](https://bionano.imn-cnm.csic.es/?lang=en).
