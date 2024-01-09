@@ -40,5 +40,7 @@
 
 ## Shape and Mechanical Properties
 
-![nAmbition-5 Image](../../misc/images/nAmb5.png)
+### nAmbition-5
+<img src="../../misc/images/nAmb5.png" alt="nAmbition-5 Image" width="700"/>
+
 
