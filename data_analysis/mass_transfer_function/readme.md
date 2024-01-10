@@ -35,4 +35,9 @@ The DataFrame exhibits a structured representation of experimental data, featuri
 
 The additional columns, labeled as `flexural_i` and `torsional_i`, provide spectra at distinct time points denoted by 'i' in minutes. Specifically, time point '0' corresponds to spectra obtained before cell attachment, offering insights into the dynamic behavior of the cantilever as it interacts with the cell over time.
 
+Here is an example of how the cantilever spectrum looks like:
+<div style="text-align:center">
+  <img src="../../misc/images/example_spectrum.png" alt="Example Spectrum" width="500"/>
+</div>
+
 
