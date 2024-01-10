@@ -31,7 +31,7 @@ The DataFrame will have the following format:
 | ...      | ...   | ...    | ...   | ...    | ...   | ... |
 | 1000000.000000      | 0.369936   | 0.414710    | 0.300206   | 0.990190    | 0.318002   | ... |
 
-The DataFrame exhibits a structured representation of experimental data, featuring a frequency column ranging from 1000 to 1000000 Hz. These frequency values are equidistantly spaced in a logarithmic scale, spanning 2048 points. 
+The DataFrame exhibits a structured representation of experimental data, featuring a frequency column ranging from 1 kHz to 1 MHz. These frequency values are equidistantly spaced in a logarithmic scale, spanning 2048 points. 
 
 The additional columns, labeled as `flexural_i` and `torsional_i`, provide spectra at distinct time points denoted by 'i' in minutes. Specifically, time point '0' corresponds to spectra obtained before cell attachment, offering insights into the dynamic behavior of the cantilever as it interacts with the cell over time.
 
