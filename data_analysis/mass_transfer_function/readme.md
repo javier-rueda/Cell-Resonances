@@ -41,3 +41,29 @@ Here is an example of how the cantilever spectrum looks like:
 </div>
 
 
+### First Estimation of Resonance Frequency and Quality Factors
+
+In this section, we embark on the initial estimation of resonance frequencies and quality factors for both flexural and torsional modes. 
+The primary objective is to perform a preliminary estimation of resonance frequencies and quality factors. 
+To achieve this, we employ the `peak_identification_flexural` and `peak_identification_torsional` functions, designed to identify prominent peaks and valleys in the flexural and torsional spectral data.
+
+To initiate the estimation process, we utilize the `peak_identification_flexural` and `peak_identification_torsional` functions with the following lines of code:
+```
+peaksF, valleysF = peak_identification_flexural(y_flexural, x_frequencies)
+peaksT, valleysT = peak_identification_torsional(y_torsional, x_frequencies)
+```
+The details concerning peaks and valleys within the spectral data are stored in two distinct DataFrames. 
+For each identified peak we obtain the peak frequency, its amplitude, the Full Width at Half Maximum (FWHM), the total width of the peak, and the associated Quality Factor.
+
+After the initial peak identification, one can visualize the outcomes of the detection process using the function: 
+
+`plot_spectrum_peaks(x_data, y_data, peaks_df, valleys_df)`.
+<div style="text-align:center">
+  <img src="../../misc/images/plot_peaks.png" alt="Peak & Valley Detection" width="500"/>
+</div>
+
+
+
+
+
+
