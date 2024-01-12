@@ -64,7 +64,64 @@ After the initial peak identification, one can visualize the outcomes of the det
 
 IMPORTANT: `peak_identification_torsional` needs to be improved!!
 
+### Fitting to Simple Harmonic Oscillator with Hydrodynamic Factor.
+
+This chapter explores the process of fitting the experimental data to a theoretical model based on a *Simple Harmonic Oscillator (SHO)* with the inclusion of a hydrodynamic factor $\lambda$. 
+
+The SHO model is a fundamental representation of oscillatory systems, and the addition of the hydrodynamic factor accounts for fluid interactions, providing a more comprehensive analysis. The following sections detail the implementation of the fitting procedure, offering insights into the extraction of key parameters that contribute to the characterization of cell mechanics. To avoid repetition, we will be taking as an example the fitting of the flexural spectra.
+
+Before initiating the fitting, a critical step involves selecting the appropriate range for the analysis. Interestingly, there is no discernable distinction between fitting the entire dataset at once or fitting each peak individually before consolidating the results. To define the fitting range, the following functions are utilized:
+
+```
+fitting_regions_F = regions_F(peaksF, valleysF)
+xFit_flexural, yFitRange_flexural = range_fit(fitting_regions_F, x_frequencies, y_flexural,
+                                              start_mode=1, end_mode=3, flat_i=5)
+```
+
+Here, we end up with the variables `xFit_flexural` and `yFitRange_flexural`, representing the values within the chosen range for the fitting process.
 
 
 
+The function `initial_values_F` provides the capability to set or modify the initial values of the parameters used in the fitting process. Similarly, the function `bounds_SHO_F` facilitates the customization of bounds for each parameter in the fitting model. By adjusting these initial values and parameter bounds, users can influence the starting point of the fitting algorithm and guide it toward convergence.
+
+```
+initial_guess_F = initial_values_F(peaksF)
+parameter_bounds_F = bounds_SHO_F(peaksF, 
+                                  min_resFactor=0.9, max_resFactor=1.3, 
+                                  min_QFactor=0.3, max_QFactor=10)
+```
+
+
+The data is then fitted to a theoretical model represented by the SHO with Hydrodynamic Factor function:
+
+$$ 
+F_{\lambda} = \sqrt{\sum_{n=1}^{N}  \frac{A^2_n  (\frac{\omega}{\omega_n})^{\lambda}}{(\omega^2/\omega_n^2)^{(1 + \lambda)}  + Q_n^2  (1-(\omega^2/\omega_n^2))^2} + \frac{P}{\omega} + W}  
+$$
+
+being $N$ the total number of vibrational modes of the spectrum. $P$ and $W$ are global fitting parameters.
+
+The parameters $A_n, \omega_n, Q_n$, and $\lambda_n$ represent the amplitude, resonance frequency, quality factor, and the hydrodynamic parameter corresponding to the the $n$-th vibrational mode. 
+
+
+
+The fitting process is initialized by defining parameters and using iterative refinement. The iterative fitting continues until the correlation coefficient $\(R^2\)$ reaches 0.999 or when the variation in the parameters is less than 1%. The final fitted values are then utilized to generate the fitting curve. 
+
+```
+# First Estimation of Fitting Parameters
+params_F, covariance = curve_fit(SHO_hydro_full, xFit_flexural, yFitRange_flexural, method='trf',
+                                 p0=initial_guess_F, bounds=parameter_bounds_F, maxfev=10000)
+
+# Iterative Fitting
+params_F, covariance = iterative_fitting(params_F, parameter_bounds_F, xFit_flexural, yFitRange_flexural, N=1000)
+
+# Fitting Curve
+yFit_flexural = SHO_hydro_full(xFit_flexural, *params_F)
+```
+
+After completing the spectral fitting process, the obtained results can be visualized using the function:
+
+`plot_fitting(x_frequencies, y_flexural, xFit_flexural, yFit_flexural, params_F, title=f"Flexural {i}")`
+.<div style="text-align:center">
+  <img src="../../misc/images/plot_fitting.png" alt="Peak & Valley Detection" width="500"/>
+</div>
 
