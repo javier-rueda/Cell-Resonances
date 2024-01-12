@@ -92,7 +92,7 @@ parameter_bounds_F = bounds_SHO_F(peaksF,
 ```
 
 
-The data is then fitted to a theoretical model represented by the SHO with Hydrodynamic Factor function:
+The data is then fitted to a theoretical model represented by the SHO with Hydrodynamic Factor function (eq. 2.4):
 
 $$ 
 F_{\lambda} = \sqrt{\sum_{n=1}^{N}  \frac{A^2_n  (\frac{\omega}{\omega_n})^{\lambda}}{(\omega^2/\omega_n^2)^{(1 + \lambda)}  + Q_n^2  (1-(\omega^2/\omega_n^2))^2} + \frac{P}{\omega} + W}  
@@ -125,3 +125,4 @@ After completing the spectral fitting process, the obtained results can be visua
   <img src="../../misc/images/plot_fitting.png" alt="Peak & Valley Detection" width="500"/>
 </div>
 
+All parameters are then saved into the DataFrame `fitting_parameters_F[f'flexural_{i}']` for further analysis. One may opt to exclude outliers from the dataset using the `clean_dataframe(fitting_parameters_F)` function. However, caution is advised in the application of this function, as while it enhances the internal coherence of the data, there is a risk of excessive reduction, potentially leading to temporal gaps in the dataset.
