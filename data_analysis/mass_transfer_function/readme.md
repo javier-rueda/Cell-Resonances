@@ -126,3 +126,12 @@ After completing the spectral fitting process, the obtained results can be visua
 </div>
 
 All parameters are then saved into the DataFrame `fitting_parameters_F[f'flexural_{i}']` for further analysis. One may opt to exclude outliers from the dataset using the `clean_dataframe(fitting_parameters_F)` function. However, caution is advised in the application of this function, as while it enhances the internal coherence of the data, there is a risk of excessive reduction, potentially leading to temporal gaps in the dataset.
+
+After creating the fitting parameters dataset, we will transpose the DataFrame to better organize the information, assigning each column to a specific parameter. This restructuring is intended to improve the dataset's suitability for subsequent analytical procedures. Once the transposition is complete, we can determine the relative changes in both the Resonance Frequency and Quality Factor for each vibrational mode. This analysis can be performed using the function `compute_relative_change(parametersF, columns)`.
+
+The results can be visualized in a plot by running the function `plot_relative_change(parametersF, parametersT)`.
+.<div style="text-align:center">
+  <img src="../../misc/images/plot_parameters.png" alt="Peak & Valley Detection" width="500"/>
+</div>
+
+
