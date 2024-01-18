@@ -171,7 +171,7 @@ $$ \mu_n = \left(\frac{\omega_{R,n}}{\omega_{RC,n}}\right)^2 -1 $$
 
 $$\zeta_n = \frac{Q_{R,n}}{Q_{RC,n}}-\left(\frac{\omega_{RC,n}}{\omega_{R,n}}\right)^2$$
 
-being $\omega_{R,n}$  $(Q_{R,n})$ the Resonance Frequency (the Quality Factor) of the $n$-th mode before cell adhesion, whereas $\omega_{RC,n}$  $(Q_{R,n})$ corresponds to the resonance frequency (the Quality Factor) of the cell-resonator system after the cell has adhered.  Similarly as has been done previously, one can plot the results by using the function `plot_resonator_dissipation(parametersF, parametersT)`
+being $\omega_{R,n}$  $(Q_{R,n})$ the Resonance Frequency (the Quality Factor) of the $n$-th mode before cell adhesion, whereas $\omega_{RC,n}$  $(Q_{R,n})$ corresponds to the resonance frequency (the Quality Factor) of the cell-resonator system after the cell has adhered.  Similarly as has been done previously, one can plot the results by using the function `plot_resonator_dissipation(parametersF, parametersT)`.
 
 
 <div style="text-align:center">
