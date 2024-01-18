@@ -130,6 +130,8 @@ After completing the spectral fitting process, the obtained results can be visua
   <img src="../../misc/images/plot_fitting.png" alt="Peak & Valley Detection" width="500"/>
 </div>
 
+### Parameter Analysis (Hydrodynamic Fitting)
+
 All parameters are then saved into the DataFrame `fitting_parameters_F[f'flexural_{i}']` for further analysis. One may opt to exclude outliers from the dataset using the `clean_dataframe(fitting_parameters_F)` function. However, caution is advised in the application of this function, as while it enhances the internal coherence of the data, there is a risk of excessive reduction, potentially leading to temporal gaps in the dataset.
 
 After creating the fitting parameters dataset, we will transpose the DataFrame to better organize the information, assigning each column to a specific parameter. This restructuring is intended to improve the dataset's suitability for subsequent analytical procedures. 
@@ -148,11 +150,25 @@ After creating the fitting parameters dataset, we will transpose the DataFrame t
 
 
 
-Once the transposition is complete, we can determine the relative changes in both the Resonance Frequency and Quality Factor for each vibrational mode. This analysis can be performed using the function `compute_relative_change(parametersF, columns)`.
+Once the transposition is complete, we can determine the relative changes in both the Resonance Frequency and Quality Factor for each vibrational mode. This analysis can be performed using the function
+
+```
+parametersF = compute_relative_change(parametersF, columns=['Frequency 1F', 'QFactor 1F',
+                                                            'Frequency 2F', 'QFactor 2F',
+                                                            'Frequency 3F', 'QFactor 3F'])
+```
 
 The results can be visualized in a plot by running the function `plot_relative_change(parametersF, parametersT)`.
+
 <div style="text-align:center">
   <img src="../../misc/images/plot_parameters.png" alt="Peak & Valley Detection" width="1000"/>
 </div>
+
+The relative change in resonator mass $\mu_n$ after cell adhesion can be computed using Equation (1.64): 
+
+$$ \mu_n = \left(\frac{\omega_{R,n}}{\omega_{RC,n}}\right)^2 -1 $$
+
+being $\omega_{R,n}$ the resonance frequency of the $n$-th mode before cell adhesion, whereas $\omega_{RC,n}$ corresponds to the resonance frequency of the cell-resonator system after the cell has adhered.
+
 
 
