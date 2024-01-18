@@ -164,11 +164,15 @@ The results can be visualized in a plot by running the function `plot_relative_c
   <img src="../../misc/images/plot_parameters.png" alt="Peak & Valley Detection" width="1000"/>
 </div>
 
-The relative change in resonator mass $\mu_n$ after cell adhesion can be computed using Equation (1.64): 
+
+In a similar fashion, after determining the relative change in Resonance Frequency and Quality Factor, one can employ Equation (1.64) to compute the relative change in resonator mass $\mu_n$. The variation in dissipation energy $\zeta_n$ attributed to internal cell dissipation subsequent to cell adhesion can be calculated from Equation (1.66).
 
 $$ \mu_n = \left(\frac{\omega_{R,n}}{\omega_{RC,n}}\right)^2 -1 $$
 
-being $\omega_{R,n}$ the resonance frequency of the $n$-th mode before cell adhesion, whereas $\omega_{RC,n}$ corresponds to the resonance frequency of the cell-resonator system after the cell has adhered.
+$$\zeta_n = \frac{Q_{R,n}}{Q_{RC,n}}-\left(\frac{\omega_{RC,n}}{\omega_{R,n}}\right)^2$$
+
+being $\omega_{R,n}$  $(Q_{R,n})$ the Resonance Frequency (the Quality Factor) of the $n$-th mode before cell adhesion, whereas $\omega_{RC,n}$  $(Q_{R,n})$ corresponds to the resonance frequency (the Quality Factor) of the cell-resonator system after the cell has adhered.  
+
 
 
 
