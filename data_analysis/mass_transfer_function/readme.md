@@ -63,8 +63,9 @@ For each identified peak we obtain the peak frequency, its amplitude, the Full W
 After the initial peak identification, one can visualize the outcomes of the detection process using the function: 
 
 `plot_spectrum_peaks(x_data, y_data, peaks_df, valleys_df)`.
-<div style="text-align:center">
-  <img src="../../misc/images/plot_peaks.png" alt="Peak & Valley Detection" width="500"/>
+<div style="display: flex; justify-content: space-between;">
+    <img src="../../misc/images/plot_peaks.png" alt="Plot Peaks" style="width: 48%; max-width: 300px;" />
+    <img src="../../misc/images/plot_peaks_torsional.png" alt="Plot Peaks Torsional" style="width: 48%; max-width: 300px;" />
 </div>
 
 IMPORTANT: `peak_identification_torsional` needs to be improved!!
@@ -125,9 +126,11 @@ yFit_flexural = SHO_hydro_full(xFit_flexural, *params_F)
 
 After completing the spectral fitting process, the obtained results can be visualized using the function:
 
-`plot_fitting(x_frequencies, y_flexural, xFit_flexural, yFit_flexural, params_F, title=f"Flexural {i}")`
-.<div style="text-align:center">
-  <img src="../../misc/images/plot_fitting.png" alt="Peak & Valley Detection" width="500"/>
+`plot_fitting(x_frequencies, y_flexural, xFit_flexural, yFit_flexural, params_F, title=f"Flexural {i}")`.
+
+<div style="display: flex; justify-content: space-between;">
+    <img src="../../misc/images/plot_fitting.png" alt="Plot Peaks" style="width: 48%; max-width: 300px;" />
+    <img src="../../misc/images/plot_fitting_torsional.png" alt="Plot Peaks Torsional" style="width: 48%; max-width: 300px;" />
 </div>
 
 ### Parameter Analysis (Hydrodynamic Fitting)
@@ -161,7 +164,7 @@ parametersF = compute_relative_change(parametersF, columns=['Frequency 1F', 'QFa
 The results can be visualized in a plot by running the function `plot_relative_change(parametersF, parametersT)`.
 
 <div style="text-align:center">
-  <img src="../../misc/images/plot_parameters.png" alt="Peak & Valley Detection" width="1000"/>
+  <img src="../../misc/images/plot_parameters.png" alt="Hydrodynamic Parameters" width="1000"/>
 </div>
 
 
