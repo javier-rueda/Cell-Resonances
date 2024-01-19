@@ -181,7 +181,7 @@ being $\omega_{R,n}$  $(Q_{R,n})$ the Resonance Frequency (the Quality Factor) o
   <img src="../../misc/images/plot_resonator_dissipation.png" alt="Peak & Valley Detection" width="1000"/>
 </div>
 
-
+The DataFrames containing fitting parameters information can be exported to a CSV file for subsequent analysis or utilization in other scripts. This export operation is facilitated by the function `export_dataframe(parametersF, directory, filename)`.
 
 
 ### Mass Transfer Function
