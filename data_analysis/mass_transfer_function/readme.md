@@ -64,7 +64,7 @@ After the initial peak identification, one can visualize the outcomes of the det
 
 `plot_spectrum_peaks(x_data, y_data, peaks_df, valleys_df)`.
 <div style="display: flex; justify-content: space-between;">
-    <img src="../../misc/images/plot_peaks.png" alt="Plot Peaks" style="width: 48%; max-width: 300px;" />
+    <img src="../../misc/images/plot_peaks_flexural.png" alt="Plot Peaks" style="width: 48%; max-width: 300px;" />
     <img src="../../misc/images/plot_peaks_torsional.png" alt="Plot Peaks Torsional" style="width: 48%; max-width: 300px;" />
 </div>
 
