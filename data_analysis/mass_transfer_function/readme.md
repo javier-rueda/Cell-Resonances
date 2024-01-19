@@ -140,19 +140,6 @@ All parameters are then saved into the DataFrame `fitting_parameters_F[f'flexura
 After creating the fitting parameters dataset, we will transpose the DataFrame to better organize the information, assigning each column to a specific parameter. This restructuring is intended to improve the dataset's suitability for subsequent analytical procedures. 
 
 
-<p align="center">
-  <table>
-    <tr><th></th><th>Amplitude 1F</th><th>Frequency 1F</th><th>QFactor 1F</th><th>...</th><th>R2</th><th>MSE</th></tr>
-    <tr><td>flexural_0</td><td>0.932428</td><td>14972.411</td><td>1.748</td><td>...</td><td>0.998905</td><td>0.000077</td></tr>
-    <tr><td>flexural_2</td><td>0.900000</td><td>10267.902</td><td>1.111</td><td>...</td><td>0.993405</td><td>0.000693</td></tr>
-    <tr><td>flexural_3</td><td>0.900000</td><td>9969.332</td><td>1.153</td><td>...</td><td>0.998680</td><td>0.000136</td></tr>
-    <tr><td>flexural_4</td><td>0.900000</td><td>9747.044</td><td>1.121</td><td>...</td><td>...</td><td>...</td></tr>
-  </table>
-</p>
-
-
-
-
 Once the transposition is complete, we can determine the relative changes in both the Resonance Frequency and Quality Factor for each vibrational mode. All new information will be added to its corresponding DataFrame. This analysis can be performed using the function
 
 ```
@@ -182,19 +169,22 @@ being $\omega_{R,n}$  $(Q_{R,n})$ the Resonance Frequency (the Quality Factor) o
 </div>
 
 The DataFrames containing fitting parameters information can be exported to a CSV file for subsequent analysis or utilization in other scripts. This export operation is facilitated by the function `export_dataframe(parametersF, directory, filename)`.
-| Time | Amplitude 1F | Frequency 1F | QFactor 1F | Lambda 1F | Amplitude 2F | Frequency 2F | QFactor 2F | Lambda 2F | ... | Resonator Mass 1F | Resonator Mass 2F | Resonator Mass 3F | Dissipation Energy 1F | Dissipation Energy 2F | Dissipation Energy 3F |
-|------|--------------|---------------|------------|-----------|--------------|---------------|------------|-----------|-----|-------------------|-------------------|-------------------|-----------------------|-----------------------|-----------------------|
-| 0,0  | 0.9324       | 14972.41      | 1.7484     | 0.3692    | 0.2540       | 109685.45     | 3.8759     | 0.5938    | ... | 0.0               | 0.0               | 0.0               | 0.0                   | 0.0                   | 0.0                   |
-| 2,0  | 0.9000       | 10267.90      | 1.1110     | 0.4980    | 0.1448       | 109763.18     | 2.0243     | 0.6690    | ... | -0.2288           | 0.9133            | 0.2585            | 0.3997                | 0.4012                | 0.4845                |
-| 3,0  | 0.9000       | 9969.33       | 1.1535     | 0.4553    | 0.1395       | 109141.38     | 1.9708     | 0.4413    | ... | -0.3098           | 1.2555            | 0.0099            | 0.4011                | 0.4053                | 0.4554                |
-| 4,0  | 0.9000       | 9747.04       | 1.1213     | 0.4395    | 0.1388       | 108524.77     | 1.9369     | 0.4372    | ... | -0.3100           | 1.3596            | 0.0215            | 0.3997                | 0.4012                | 0.4211                |
-| ...  | ......       | .......       | ......     | ......    | ......       | .........     | ......     | ......    | ... | .......           | ......            | ......            | ......                | ......                | ......                |
+
+
+| Time | Amplitude 1F | Frequency 1F | QFactor 1F | Lambda 1F | Amplitude 2F | Frequency 2F | QFactor 2F | Lambda 2F | Amplitude 3F | Frequency 3F | QFactor 3F | Lambda 3F | WN | Fcut | R2 | MSE | Frequency 1F RelativeChange | QFactor 1F RelativeChange | Frequency 2F RelativeChange | QFactor 2F RelativeChange | Frequency 3F RelativeChange | QFactor 3F RelativeChange | Resonator Mass 1F | Resonator Mass 2F | Resonator Mass 3F | Dissipation Energy 1F | Dissipation Energy 2F | Dissipation Energy 3F |
+|------|--------------|---------------|------------|-----------|--------------|---------------|------------|-----------|--------------|---------------|------------|-----------|----|------|----|-----|-----------------------------|--------------------------|-----------------------------|--------------------------|-----------------------------|--------------------------|-------------------|-------------------|-------------------|-----------------------|-----------------------|-----------------------|
+| 0,0  | 0.9324       | 14972.41      | 1.7484     | 0.3692    | 0.2540       | 109685.45     | 3.8759     | 0.5938    | 0.0771       | 321556.93     | 7.2948     | 0.9791    | 0.0| 0.9989| 7.7e-05| 0.0 | 0.0                         | 0.0                      | 0.0                         | 0.0                      | 0.0                         | 0.0                      | 0.0               | 0.0               | 0.0               | 0.0                   | 0.0                   | 0.0                   |
+| 2,0  | 0.9000       | 10267.90      | 1.1110     | 0.4980    | 0.1448       | 109763.18     | 2.0243     | 0.6690    | 0.0349       | 327640.72     | 5.6257     | 1.0       | 0.0| 3.0223| 9.0e-18| 1.4154e-16 | 0.9934                   | 6.9e-04                  | -0.3142                    | -0.3646                 | 7.1e-16                    | 0.9987                   | -0.2288           | 0.9133            | 0.2585            | 0.3997                | 0.4012                | 0.4845                |
+| 3,0  | 0.9000       | 9969.33       | 1.1535     | 0.4553    | 0.1395       | 109141.38     | 1.9708     | 0.4413    | 0.0343       | 329364.52     | 5.0349     | 1.0       | 0.0| 0.9987| 0.00014| 0.0 | -0.3342                   | -0.3403                  | -0.00496                   | -0.4915                 | 2.4e-02                    | -0.3098                  | 1.2555            | 0.0099            | 0.4011            | 0.4053                | 0.4554                | 0.4554                |
+| 4,0  | 0.9000       | 9747.04       | 1.1213     | 0.4395    | 0.1388       | 108524.77     | 1.9369     | 0.4372    | 0.0348       | 329533.03     | 5.0261     | 1.0       | 0.0| 0.9982| 0.00019| 0.0 | -0.3489                   | -0.3586                  | -0.01058                   | -0.5003                 | 2.5e-02                    | -0.3100                  | 1.3596            | 0.0215            | 0.3997            | 0.4012                | 0.4211                | 0.4211                |
+| ...  | ...          | ...           | ...        | ...       | ...          | ...           | ...        | ...       | ...          | ...           | ...        | ...       | ...| ...  | ...| ... | ...                         | ...                      | ...                         | ...                      | ...                         | ...                      | ...               | ...               | ...               | ...                   | ...                   | ...                   |
+
 
 
 ### Mass Transfer Function
 
 $$
-F = \sqrt{\sum_{n=1}^N  \frac{A_n \left(  \frac{\omega}{\omega_{R,n}} \right)^{\lambda_n}}{   \left( \frac{\omega}{\omega_{R,n}} \right)^{2(1+\lambda_n)}  + Q_{R,n}^2 \left(   1- \left( 1 + \frac{\Delta m_n}{M_{R,n}}   \xi_n MTF(\omega)   \right)   \left(\frac{\omega}{\omega_{R,n}}\right)^2      \right)^2   } + \frac{P}{\omega} + W   }
+F = \sqrt{\sum_{n=1}^N  \frac{A^2_n \left(  \frac{\omega}{\omega_{R,n}} \right)^{\lambda_n}}{   \left( \frac{\omega}{\omega_{R,n}} \right)^{2(1+\lambda_n)}  + Q_{R,n}^2 \left(   1- \left( 1 + \frac{\Delta m_n}{M_{R,n}}   \xi_n MTF(\omega)   \right)   \left(\frac{\omega}{\omega_{R,n}}\right)^2      \right)^2   } + \frac{P}{\omega} + W   }
 $$
 
 $$
