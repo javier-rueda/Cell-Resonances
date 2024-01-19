@@ -129,7 +129,7 @@ After completing the spectral fitting process, the obtained results can be visua
 `plot_fitting(x_frequencies, y_flexural, xFit_flexural, yFit_flexural, params_F, title=f"Flexural {i}")`.
 
 <div style="display: flex; justify-content: space-between;">
-    <img src="../../misc/images/plot_fitting.png" alt="Plot Peaks" style="width: 48%; max-width: 300px;" />
+    <img src="../../misc/images/plot_fitting_flexural.png" alt="Plot Peaks" style="width: 48%; max-width: 300px;" />
     <img src="../../misc/images/plot_fitting_torsional.png" alt="Plot Peaks Torsional" style="width: 48%; max-width: 300px;" />
 </div>
 
