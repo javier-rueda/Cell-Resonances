@@ -187,7 +187,7 @@ being $\omega_{R,n}$  $(Q_{R,n})$ the Resonance Frequency (the Quality Factor) o
 ### Mass Transfer Function
 
 $$
-F = \sqrt{\sum_{n=1}^2  \frac{A_n \left(  \frac{\omega}{\omega_{R,n}} \right)^{\lambda_n}}{   \left( \frac{\omega}{\omega_{R,n}} \right)^{2(1+\lambda_n)}  + Q_{R,n}^2 \left(   1- \left( 1 + \frac{\Delta m_n}{M_{R,n}}   \xi_n MTF(\omega)   \right)   \left(\frac{\omega}{\omega_{R,n}}\right)^2      \right)^2   } \frac{P}{\omega} + W   }
+F = \sqrt{\sum_{n=1}^2  \frac{A_n \left(  \frac{\omega}{\omega_{R,n}} \right)^{\lambda_n}}{   \left( \frac{\omega}{\omega_{R,n}} \right)^{2(1+\lambda_n)}  + Q_{R,n}^2 \left(   1- \left( 1 + \frac{\Delta m_n}{M_{R,n}}   \xi_n MTF(\omega)   \right)   \left(\frac{\omega}{\omega_{R,n}}\right)^2      \right)^2   } + \frac{P}{\omega} + W   }
 $$
 
 $$
