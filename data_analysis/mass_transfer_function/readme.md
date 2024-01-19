@@ -153,7 +153,7 @@ After creating the fitting parameters dataset, we will transpose the DataFrame t
 
 
 
-Once the transposition is complete, we can determine the relative changes in both the Resonance Frequency and Quality Factor for each vibrational mode. This analysis can be performed using the function
+Once the transposition is complete, we can determine the relative changes in both the Resonance Frequency and Quality Factor for each vibrational mode. All new information will be added to its corresponding DataFrame. This analysis can be performed using the function
 
 ```
 parametersF = compute_relative_change(parametersF, columns=['Frequency 1F', 'QFactor 1F',
