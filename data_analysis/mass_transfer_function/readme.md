@@ -183,8 +183,14 @@ The DataFrames containing fitting parameters information can be exported to a CS
 
 ### Mass Transfer Function
 
+Since the Hydro Fitting gives us a decent estimation of parameters such as the Resonance Frequency and Q-Factors of the system, we will be using such parameters as initial values for our MTF fitting.
+
+We will create a function that gives us the ranges for the fitting.
+Torisonal: 5kHz - primer minimo (valley)
+Flexural: valley after 1F - 800kHz
+
 $$
-F = \sqrt{\sum_{n=1}^N  \frac{A^2_n \left(  \frac{\omega}{\omega_{R,n}} \right)^{\lambda_n}}{   \left( \frac{\omega}{\omega_{R,n}} \right)^{2(1+\lambda_n)}  + Q_{R,n}^2 \left(   1- \left( 1 + \frac{\Delta m_n}{M_{R,n}}   \xi_n MTF(\omega)   \right)   \left(\frac{\omega}{\omega_{R,n}}\right)^2      \right)^2   } + \frac{P}{\omega} + W   }
+F = \sqrt{\sum_{n=1}^N  \frac{A^2_n \left(  \frac{\omega}{\omega_{R,n}} \right)^{\lambda_n}}{   \left( \frac{\omega}{\omega_{R,n}} \right)^{2(1+\lambda_n)}  + Q_{R,n}^2 \left(   1- \left( 1 + \frac{\Delta m_n}{m_{R,n}}   \xi_n MTF(\omega)   \right)   \left(\frac{\omega}{\omega_{R,n}}\right)^2      \right)^2   } + \frac{P}{\omega} + W   }
 $$
 
 $$
