@@ -193,9 +193,7 @@ $$
 F = \sqrt{\sum_{n=1}^N  \frac{A^2_n \left(  \frac{\omega}{\omega_{R,n}} \right)^{\lambda_n}}{   \left( \frac{\omega}{\omega_{R,n}} \right)^{2(1+\lambda_n)}  + Q_{R,n}^2 \left(   1- \left( 1 + \frac{\Delta m_n}{m_{R,n}}   \xi_n MTF(\omega)   \right)   \left(\frac{\omega}{\omega_{R,n}}\right)^2      \right)^2   } + \frac{P}{\omega} + W   }
 $$
 
-$$
-\mu_n = \frac{\Delta m_n}{m_{R,n}} \xi_n
-$$
+
 
 $$
 MTF_{tors}(\omega) = \frac{\phi_{C,1F}^2}{1- e^{\frac{-i\pi \beta_{C,1F}}{2}}  \left(  \frac{\omega}{\omega_{C,1F}} \right)^{2 - \beta_{C,1F}}  } + (1 - \phi_{C,1F}^2)
