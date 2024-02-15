@@ -207,3 +207,19 @@ MTF_{flex}(\omega) = \frac{\phi_{C,1E}^2}{1- e^{\frac{-i\pi \beta_{C,1E}}{2}}  \
 $$
 
 
+## Coupling of Flexural Vibration Modes into Torsional Spectra
+
+### Flexural Spectra 
+Assuming that the flexural spectra receives no contribution from the torsional vibrations: $\alpha_T = 0$. 
+The fitting model of the flexural spectra before cell attachment can be expressed as:
+
+$$ 
+F_{\lambda, FLEX} = \sqrt{\sum_{n=1}^{N}  \frac{A^2_n  (\frac{\omega}{\omega_n})^{\lambda}}{(\omega^2/\omega_n^2)^{(1 + \lambda)}  + Q_n^2  (1-(\omega^2/\omega_n^2))^2} + \frac{P}{\omega} + W}  
+$$
+
+However, in order to take into consideration the small peak that appears before the first torsional mode, we will be adding a weighted contribution $\alpha_F$ from the flexural hydro fitting into the torsional fitting function:
+
+$$ 
+F_{\lambda, TORS} = \sqrt{\sum_{n=1}^{N}  \frac{A^2_n  (\frac{\omega}{\omega_n})^{\lambda}}{(\omega^2/\omega_n^2)^{(1 + \lambda)}  + Q_n^2  (1-(\omega^2/\omega_n^2))^2} + \frac{P}{\omega} + W} + \alpha_F \ (F_{\lambda, FLEX})
+$$
+
